@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
+import Transition from 'react-transition-group/Transition';
 import '../css/App.css';
 
 class TransitionComp extends Component{
     state = {
-        show: false
+        show: true
     }
     showDiv = () => {
         this.setState({
@@ -14,13 +15,22 @@ class TransitionComp extends Component{
     render(){
         return(
             <div>
-                {this.state.show ? <div style={{
+                <Transition 
+                in={this.state.show}
+                timeout={2000}>
+                {state =>
+                <div style={{
                     background:'red',
-                    height:'100px'
+                    height:'100px',
+                    transition:'all 2s ease',
+                    opacity: state  === 'exited' ||state === 'exiting' ? 0 : 1
+                    
                 }}>
+                        {state}
+                </div>
 
-                </div>:
-            null }
+                }
+                </Transition>
             <div className="showDiv"
             onClick={this.showDiv}>
                 Show or Hide
