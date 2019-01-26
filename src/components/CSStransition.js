@@ -7,7 +7,7 @@ class Fade extends Component{
         return(
             <div>
                 
-                CSS TRANSITIONS 
+                CSS TRANSITIONS q
             </div>
         )
     }
