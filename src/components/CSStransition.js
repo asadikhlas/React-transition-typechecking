@@ -6,6 +6,7 @@ class Fade extends Component{
     render(){
         return(
             <div>
+                
                 CSS TRANSITIONS 
             </div>
         )
