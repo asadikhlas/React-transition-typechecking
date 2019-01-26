@@ -28,6 +28,8 @@ class Slide extends Component{
         })
     }
 
+    
+
     render(){
         return(
             <div>
