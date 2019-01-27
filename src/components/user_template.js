@@ -17,9 +17,11 @@ UserTemplate.PropsTypes = {
   spanish: PropsTypes.bool,
   message: PropsTypes.func,
   car: PropsTypes.object,
-  mother: function(props, propName, componentName){
-    if(props[propsName] !== 'zahida'){
-      return new Error(`The name ${ props[propName]} is incorrect should be Zahida`)
+  mother: function(props, propName, componentName) {
+    if (props[propsName] !== "zahida") {
+      return new Error(
+        `The name ${props[propName]} is incorrect should be Zahida`
+      );
     }
   }
 };
