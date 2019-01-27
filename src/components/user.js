@@ -12,11 +12,16 @@ class User extends Component {
       console.log("hey");
     },
     car: { brand: "Ford", model: "focus" },
-    mother: "zahida"
+    mother: "zahida",
+    color:'red'
   };
   render() {
+    const style = {
+      color: this.state.color
+    }
     return (
       <div>
+        <h4 style={style}>{this.state.mother}</h4>
         <UserTemplate {...this.state} />
       </div>
     );
