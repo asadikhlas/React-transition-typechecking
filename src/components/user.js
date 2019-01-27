@@ -15,13 +15,24 @@ class User extends Component {
     mother: "zahida",
     color:'red'
   };
+
+
+  changeColor(){
+    // this.setState({
+    //   color:'blue'
+    this.refs.myColor.style.color = 'blue'
+    }
+  
   render() {
     const style = {
       color: this.state.color
     }
     return (
       <div>
-        <h4 style={style}>{this.state.mother}</h4>
+        <h4 style={style} ref="myColor">{this.state.mother}</h4>
+        <div onClick={()=>this.changeColor()}>
+          Change the color
+        </div>
         <UserTemplate {...this.state} />
       </div>
     );
